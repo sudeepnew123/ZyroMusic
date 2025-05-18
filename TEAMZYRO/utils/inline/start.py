@@ -28,10 +28,15 @@ def private_panel(_):
             InlineKeyboardButton(text=_["S_B_5"], user_id=config.OWNER_ID),
             InlineKeyboardButton(text=_["S_B_6"], url=config.SUPPORT_CHANNEL),
         ],
-        
+        [
+            InlineKeyboardButton(
+                text="support",  # Button ka naam
+                url="https://t.me/for4ever_friends"  # Yaha apna repo ka link daalna
+            ),
+        ],
         [
             InlineKeyboardButton(text=_["S_B_4"], callback_data="settings_back_helper"),
         ],
     ]
     return buttons
-
+    
