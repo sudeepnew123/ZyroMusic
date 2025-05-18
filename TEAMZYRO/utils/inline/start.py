@@ -31,7 +31,7 @@ def private_panel(_):
         [
             InlineKeyboardButton(
                 text="support",  # Button ka naam
-                url="https://t.me/for4ever_friends"  # Yaha apna repo ka link daalna
+                url="https://t.me/+OjA4vsiCTgQwNzM1"  # Yaha apna repo ka link daalna
             ),
         ],
         [
