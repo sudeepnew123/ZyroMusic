@@ -169,9 +169,9 @@ async def greet_new_member(_, member: ChatMemberUpdated):
             deep_link = f"tg://openmessage?user_id={user.id}"
             add_link = f"https://t.me/{app.username}?startgroup=true"
             temp.MELCOW[f"welcome-{member.chat.id}"] = await app.send_photo(
-                member.chat.id,
-                photo=welcomeimg,
-                caption=f"""
+    member.chat.id,
+    photo=welcomeimg,
+    caption=f"""
 ─────✦ ᴡᴇʟᴄᴏᴍᴇ ✦─────
 
 **➻ ɴᴀᴍᴇ »** {user.mention}
@@ -181,10 +181,11 @@ async def greet_new_member(_, member: ChatMemberUpdated):
 
 ──────────✦───────────
 """,
-                reply_markup=InlineKeyboardMarkup([
-                    [InlineKeyboardButton(button_text, url=deep_link)],
-                    [InlineKeyboardButton(text=add_button_text, url=add_link)],
-                ])
+    reply_markup=InlineKeyboardMarkup([
+        [InlineKeyboardButton(button_text, url=deep_link)],
+        [InlineKeyboardButton(text=add_button_text, url=add_link)],
+        [InlineKeyboardButton("๏ ꜱᴜᴘᴘᴏʀᴛ ๏", url="https://t.me/for4ever_friends")]
+    ])
             )
         except Exception as e:
             LOGGER.error(e)
