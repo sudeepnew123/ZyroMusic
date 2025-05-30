@@ -58,7 +58,7 @@ async def get_link_group(client, message):
         return await message.reply_text("Pʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴍᴇᴅɪᴀ ғɪʟᴇ ᴜɴᴅᴇʀ 200MB.")
 
     try:
-        text = await message.reply("Pʀᴏᴄᴇssɪɴɢ...")
+        text = await message.reply("⏳")
 
         async def progress(current, total):
             try:
