@@ -16,20 +16,14 @@ from config import BANNED_USERS
 @language
 async def ping_com(client, message: Message, _):
     start = datetime.now()
-    
-    # Step 1: Send video
-    await message.reply_video(
+    response = await message.reply_video(
         video="https://graph.org/file/5690109178f081adf464d.mp4",
         caption=_["ping_1"].format(app.mention),
     )
-    
-    # Step 2: Calculate bot stats
     pytgping = await ZYRO.ping()
     UP, CPU, RAM, DISK = await bot_sys_stats()
     resp = (datetime.now() - start).microseconds / 1000
-    
-    # Step 3: Send separate text reply with stats
-    await message.reply_text(
+    await response.edit_text(
         _["ping_2"].format(resp, app.mention, UP, RAM, CPU, DISK, pytgping),
         reply_markup=supp_markup(_),
     )
