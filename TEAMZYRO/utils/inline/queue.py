@@ -76,7 +76,7 @@ def aq_markup(_, chat_id):
             InlineKeyboardButton(text="ʀᴇsυᴍᴇ", callback_data=f"ADMIN Resume|{chat_id}"),
             InlineKeyboardButton(text="ᴘᴀυsᴇ", callback_data=f"ADMIN Pause|{chat_id}"),
             InlineKeyboardButton(text="sᴋɪᴘ", callback_data=f"ADMIN Skip|{chat_id}"),
-            InlineKeyboardButton(text="Stop", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(text="𝑆𝑡𝑜𝑝", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
