@@ -171,20 +171,25 @@ async def greet_new_member(_, member: ChatMemberUpdated):
             temp.MELCOW[f"welcome-{member.chat.id}"] = await app.send_photo(
     member.chat.id,
     photo=welcomeimg,
-    caption=f"""
-─────✦ ᴡᴇʟᴄᴏᴍᴇ ✦─────
+    caption = f"""
+𖣔━━━━━━༺༻━━━━━━𖣔
 
-**➻ ɴᴀᴍᴇ »** {user.mention}
-**➻ ɪᴅ »** `{user.id}`
-**➻ ᴜ_ɴᴀᴍᴇ »** @{user.username}
-**➻ ᴛᴏᴛᴀʟ ᴍᴇᴍʙᴇʀs »** {count}
+(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ ʜᴇʏ {user.first_name}~!
+ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ~ {member.chat.title}
 
-──────────✦───────────
+╭───────────────╮
+🔹 ɴᴀᴍᴇ: {user.mention}
+🔹 ɪᴅ: {user.id}
+🔹 ᴜꜱᴇʀ: @{user.username if user.username else "Not Available"}
+🔹 ᴍᴇᴍʙᴇʀꜱ: {count}
+╰───────────────╯
+
+𖣔━━━━━━༺༻━━━━━━𖣔
 """,
     reply_markup=InlineKeyboardMarkup([
         [InlineKeyboardButton(button_text, url=deep_link)],
         [InlineKeyboardButton(text=add_button_text, url=add_link)],
-        [InlineKeyboardButton("๏ ꜱᴜᴘᴘᴏʀᴛ ๏", url="https://t.me/+OjA4vsiCTgQwNzM1")]
+        [InlineKeyboardButton("๏ ꜱᴜᴘᴘᴏʀᴛ ๏", url="https://t.me/FOREVERFRANDS")]
     ])
             )
         except Exception as e:
