@@ -67,6 +67,12 @@ def queue_back_markup(_, CPLAY):
 def aq_markup(_, chat_id):
     buttons = [
         [
+            InlineKeyboardButton(
+                text="⧈ ᴀᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⧈",
+                url="https://t.me/Music_promaxbot?startgroup=true"
+            )
+        ],
+        [
             InlineKeyboardButton(text="ʀᴇsυᴍᴇ", callback_data=f"ADMIN Resume|{chat_id}"),
             InlineKeyboardButton(text="ᴘᴀυsᴇ", callback_data=f"ADMIN Pause|{chat_id}"),
             InlineKeyboardButton(text="sᴋɪᴘ", callback_data=f"ADMIN Skip|{chat_id}"),
